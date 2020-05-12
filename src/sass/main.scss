@@ -70,6 +70,16 @@ ul{
   align-items: center;
   line-height: 70px;
   min-width: 228px;
+  transition: 0.3s;
+
+  &:hover{
+    background: #253444;
+  }
+
+  &:active{
+    background: #1d2936;
+    color: #9a82e8;
+  }
 }
 
 .site-btn-tpt{
@@ -82,6 +92,19 @@ ul{
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+
+
+  &:hover{
+    background: #a483ec;
+    border: 2px solid #a483ec;
+    color: #ffffff;
+  }
+
+  &:active{
+    background: #a483ec;
+    color: #253444;
+  }
 }
 
 .site-btn-blue{
@@ -94,6 +117,18 @@ ul{
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: 0.3s;
+
+
+  &:hover{
+    background: #a483ec;
+    border: 2px solid #a483ec;
+  }
+
+  &:active{
+    background: #a483ec;
+    color: #253444;
+  }
 }
 
 .block-title {
@@ -119,6 +154,16 @@ ul{
   display: inline-block;
   padding: 0 4px 2px;
   border-bottom: 1px solid;
+  transition: 0.3s;
+
+  &:hover{
+    color: #a483ec;
+    border-bottom: 1px solid #a483ec;
+  }
+
+  &:active{
+    border-bottom: 1px solid #606972;
+  }
 }
 
 
@@ -127,6 +172,7 @@ ul{
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
   padding-top: 10px;
 
   &__inner{
@@ -161,6 +207,15 @@ ul{
     text-transform: uppercase;
     letter-spacing: 0.6px;
     font-size: 12px;
+    transition: 0.3s;
+
+    &:hover{
+      color: #a483ec;
+    }
+
+    &:active{
+      color: #c2aef2;
+    }
   }
 
   &__submenu{
@@ -189,6 +244,18 @@ ul{
     display: block;
     padding: 0 3px 2px;
     border-bottom: 1px solid;
+    font-size: 14px;
+    padding-top: 4px;
+    transition: 0.3s;
+
+    &:hover {
+      color: #a483ec;
+      border-bottom: 1px solid #a483ec;
+    }
+
+    &:active {
+      border-bottom: 1px solid #606972;
+    }
   }
 
 }
