@@ -23,7 +23,18 @@ $(document).ready(function () {
     nav: false,
     dots: true,
     margin: 20
-  })
+  });
+
+  $('.typewriter__mashine-btn-i').click(function () {
+    $('.typewriter__mashine-btn-i').removeClass('active');
+    $('.typewriter__mashine-bg-i').removeClass('active');
+    $('.typewriter__desc-i').removeClass('show');
+
+    $(this).addClass('active');
+    $('.typewriter__mashine-bg-i').eq($(this).index()).addClass('active');
+    $('.typewriter__desc-i').eq($(this).index()).addClass('show');
+  });
+
 });
 
 
@@ -53,6 +64,11 @@ var hasWebP = (function () {
   }
 })();
 
+var lineWidthC = 3;
+
+if($(document).width() < 1800){
+  var lineWidthC = 2;
+}
 
 $(function(){
   var waves = new SineWaves({
@@ -75,7 +91,7 @@ $(function(){
     waves: [
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 30,
         wavelength: 60,
         segmentLength: 1,
@@ -84,7 +100,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 20,
         wavelength: 40,
         segmentLength: 1,
@@ -93,7 +109,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 5,
+        lineWidth: lineWidthC + 2,
         amplitude: 30,
         wavelength: 60,
         segmentLength: 1,
@@ -102,7 +118,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
@@ -111,7 +127,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 7,
+        lineWidth: lineWidthC + 2,
         amplitude: 40,
         wavelength: 100,
         segmentLength: 1,
@@ -121,7 +137,7 @@ $(function(){
 
       {
         timeModifier: 1,
-        lineWidth: 6,
+        lineWidth: lineWidthC + 3,
         amplitude: 40,
         wavelength: 100,
         segmentLength: 1,
@@ -130,7 +146,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
@@ -139,7 +155,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 30,
         wavelength: 60,
         segmentLength: 1,
@@ -148,7 +164,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 20,
         wavelength: 40,
         segmentLength: 1,
@@ -157,7 +173,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 5,
+        lineWidth: lineWidthC + 2,
         amplitude: 30,
         wavelength: 60,
         segmentLength: 1,
@@ -166,7 +182,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
@@ -175,7 +191,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 7,
+        lineWidth: lineWidthC + 2,
         amplitude: 40,
         wavelength: 100,
         segmentLength: 1,
@@ -196,7 +212,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 4,
+        lineWidth: lineWidthC + 1,
         amplitude: 40,
         wavelength: 60,
         segmentLength: 1,
@@ -205,7 +221,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 4,
+        lineWidth: lineWidthC + 1,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
@@ -214,7 +230,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 30,
         wavelength: 60,
         segmentLength: 1,
@@ -223,7 +239,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 6,
+        lineWidth: lineWidthC + 3,
         amplitude: 40,
         wavelength: 60,
         segmentLength: 1,
@@ -232,7 +248,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 30,
         wavelength: 50,
         segmentLength: 1,
@@ -241,7 +257,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 5,
+        lineWidth: lineWidthC + 2,
         amplitude: 35,
         wavelength: 70,
         segmentLength: 1,
@@ -250,7 +266,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 3,
+        lineWidth: lineWidthC,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
@@ -259,7 +275,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 5,
+        lineWidth: lineWidthC + 2,
         amplitude: 40,
         wavelength: 100,
         segmentLength: 1,
@@ -268,7 +284,7 @@ $(function(){
       },
       {
         timeModifier: 1,
-        lineWidth: 4,
+        lineWidth: lineWidthC + 1,
         amplitude: 40,
         wavelength: 80,
         segmentLength: 1,
