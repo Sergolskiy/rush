@@ -1,0 +1,36 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage loadpage";
+  - var pageActive = "page-404";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    <picture>
+      <source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+      <source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+      <img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+    </picture>
+
+  div.main-wrap
+
+    .error-page
+      .error-page__top
+        .error-page__top-inner
+          .error-page__title.custom-title-h1 404
+          .error-page__content
+            .error-page__left
+              img(src="./img/404/paper.png")
+            .error-page__right
+              .error-page__subtitle.block-title Page Not Found
+              .error-page__caption.block-txt We are sorry, but the page you looking for does not exist.
+              .error-page__link.block-link Back to Homepage
+
+
+      .home-view.home-view--error-page
+        .home-view__inner
+          .home-view__title Lorem ipsum dolor sit amet,
+          .home-view__btn
+            a(href="#").home-view__btn-i.site-btn-blue view pricing
