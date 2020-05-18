@@ -1,0 +1,118 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage loadpage";
+  - var pageActive = "page-404";
+
+block content
+
+  div.main-wrap
+
+    .pricing
+      .pricing__top
+        .pricing__top-inner
+          .pricing__title.custom-title-h1 pricing
+
+          .pricing__tab-block
+            .pricing__tabs
+              a(href="javascript:void(0)").pricing__tab-item.active Wriiting
+              a(href="javascript:void(0)").pricing__tab-item Editing
+              a(href="javascript:void(0)").pricing__tab-item Proofreading
+            .pricing__tab-content
+              .pricing__tab-content-i.active
+                .pricing__tab-left
+                  .pricing__tab-title Wriiting
+                  .pricing__tab-price
+                    .pricing__tab-price-t from
+                    .pricing__tab-price-m $
+                      span 17.56
+                    .pricing__tab-price-b per page
+                  .pricing__tab-btn
+                    a(href="#").pricing__tab-btn-i.site-btn-violet Order now
+
+                .pricing__tab-right
+                  .pricing__tab-title.mobile Wriiting
+                  .pricing__tab-list
+                    .pricing__tab-list-i Essay written from scratch
+                    .pricing__tab-list-i Expert review of literature
+                    .pricing__tab-list-i Effective thesis statement
+                    .pricing__tab-list-i Foolproof argumentation
+                    .pricing__tab-list-i Any formatting style
+
+              .pricing__tab-content-i
+                .pricing__tab-left
+                  .pricing__tab-title Editing
+                  .pricing__tab-price
+                    .pricing__tab-price-t from
+                    .pricing__tab-price-m $
+                      span 17.56
+                    .pricing__tab-price-b per page
+                  .pricing__tab-btn
+                    a(href="#").pricing__tab-btn-i.site-btn-violet Order now
+                .pricing__tab-right
+                  .pricing__tab-title.mobile Editing
+                  .pricing__tab-list
+                    .pricing__tab-list-i Essay written from scratch
+                    .pricing__tab-list-i Expert review of literature
+                    .pricing__tab-list-i Effective thesis statement
+                    .pricing__tab-list-i Foolproof argumentation
+                    .pricing__tab-list-i Any formatting style
+
+              .pricing__tab-content-i
+                .pricing__tab-left
+                  .pricing__tab-title Proofreading
+                  .pricing__tab-price
+                    .pricing__tab-price-t from
+                    .pricing__tab-price-m $
+                      span 17.56
+                    .pricing__tab-price-b per page
+                  .pricing__tab-btn
+                    a(href="#").pricing__tab-btn-i.site-btn-violet Order now
+
+                .pricing__tab-right
+                  .pricing__tab-title.mobile Proofreading
+                  .pricing__tab-list
+                    .pricing__tab-list-i Essay written from scratch
+                    .pricing__tab-list-i Expert review of literature
+                    .pricing__tab-list-i Effective thesis statement
+                    .pricing__tab-list-i Foolproof argumentation
+                    .pricing__tab-list-i Any formatting style
+
+          .pricing-types
+            .pricing-types__list
+              .pricing-types__item.back
+                .pricing-types__logo
+                .pricing-types__title-center Money back
+                .pricing-types__title Money back
+                .pricing-types__desc Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              .pricing-types__item.data
+                .pricing-types__logo
+                .pricing-types__title-center Data protection
+                .pricing-types__title Data protection
+                .pricing-types__desc Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              .pricing-types__item.free
+                .pricing-types__logo
+                .pricing-types__title-center Free revision
+                .pricing-types__title Free revision
+                .pricing-types__desc Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+
+
+      .pricing-geeks.block-wrap
+        .pricing-geeks__inner
+          .pricing-geeks__left
+            .pricing-geeks__title.block-title Geeks do ibetter We are writing
+            .pricing-geeks__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            a(href='#').pricing-geeks__link.block-link See how it works
+          .pricing-geeks__right
+            .pricing-geeks__animation
+              include ../img/pricing/geeks.svg
+
+
+
+      .home-view.home-view--pricing-page
+        .home-view__inner
+          .home-view__title Lorem ipsum dolor sit amet,
+          .home-view__btn
+            a(href="#").home-view__btn-i.site-btn-blue view pricing
+
