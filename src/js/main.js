@@ -35,6 +35,15 @@ $(document).ready(function () {
     $('.typewriter__desc-i').eq($(this).index()).addClass('show');
   });
 
+  $('.pricing__tab-item').click(function () {
+    var i = $(this).index();
+    $('.pricing__tab-item').removeClass('active');
+    $('.pricing__tab-item').eq(i).addClass('active');
+
+    $('.pricing__tab-content-i').removeClass('active');
+    $('.pricing__tab-content-i').eq(i).addClass('active');
+  });
+
 });
 
 

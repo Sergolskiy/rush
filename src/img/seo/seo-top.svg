@@ -1,0 +1,25 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="550.5px" height="400.5px">
+    <defs>
+        <filter id="Filter_0">
+            <feOffset in="SourceAlpha" dx="0" dy="26" />
+            <feGaussianBlur result="blurOut" stdDeviation="4.899" />
+            <feFlood flood-color="rgb(85, 149, 135)" result="floodOut" />
+            <feComposite operator="out" in="floodOut" in2="blurOut" result="compOut" />
+            <feComposite operator="in" in="compOut" in2="SourceAlpha" />
+            <feComponentTransfer><feFuncA type="linear" slope="0.17"/></feComponentTransfer>
+            <feBlend mode="multiply" in2="SourceGraphic" />
+        </filter>
+
+    </defs>
+    <g filter="url(#Filter_0)">
+        <path fill-rule="evenodd"  fill="rgb(157, 227, 213)"
+              d="M274.109,3.281 C382.021,3.281 469.500,90.761 469.500,198.672 C469.500,306.583 382.021,394.062 274.109,394.062 C166.198,394.062 78.719,306.583 78.719,198.672 C78.719,90.761 166.198,3.281 274.109,3.281 Z"/>
+    </g>
+    <path fill-rule="evenodd"  opacity="0.651" fill="rgb(104, 177, 163)"
+          d="M274.703,160.062 C296.354,160.062 313.906,177.607 313.906,199.250 C313.906,220.892 296.354,238.437 274.703,238.437 C253.052,238.437 235.500,220.892 235.500,199.250 C235.500,177.607 253.052,160.062 274.703,160.062 Z"/>
+    <path fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+          d="M274.109,93.375 C332.263,93.375 379.406,140.518 379.406,198.672 C379.406,256.825 332.263,303.969 274.109,303.969 C215.955,303.969 168.812,256.825 168.812,198.672 C168.812,140.518 215.955,93.375 274.109,93.375 Z"/>
+</svg>
