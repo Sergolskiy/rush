@@ -1933,8 +1933,12 @@ ul{
     background: #9de3d5;
     position: relative;
     top: -3px;
-    padding: 50px 60px 73px;
+    //padding: 50px 60px 73px;
+    padding: 50px 0 73px;
     box-shadow: 4.848px 8.746px 26.97px 2.03px rgba(66, 115, 104, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__box-title{
@@ -1948,6 +1952,7 @@ ul{
     letter-spacing: .84px;
     text-align: center;
     font-family: 'Poppins';
+    max-width: 325px;
 
     &:after{
       content: '';
@@ -2744,7 +2749,7 @@ ul{
   }
 
   .blog-sidebar__box {
-    padding: 53px 56px 67px;
+    padding: 53px 0 67px;
   }
 
   .blog-sidebar__box-title{
@@ -2753,6 +2758,7 @@ ul{
     letter-spacing: .72px;
     padding-bottom: 32px;
     margin-bottom: 30px;
+    max-width: 300px;
   }
 
   .blog-sidebar__box-btn-i{
@@ -3175,6 +3181,9 @@ ul{
     margin: 0 -30px;
   }
 
+  .custom-form .error-message{
+    left: 35px;
+  }
 
   //1220 blog page media end
 
@@ -3241,6 +3250,11 @@ ul{
   .blog-sidebar{
     left: 0;
   }
+
+  .blog-sidebar__bottom{
+    margin: 0 -10px;
+  }
+
   //1220 blog page media end
 
 }
