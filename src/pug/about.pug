@@ -1,0 +1,74 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage loadpage";
+  - var pageActive = "about-page";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    <picture>
+      <source srcset="./img/awesomeWebPImage.webp" type="image/webp">
+      <source srcset="./img/creakyOldJPEG.jpg" type="image/jpeg">
+      <img src="./img/creakyOldJPEG.jpg" alt="Alt Text!">
+    </picture>
+
+  div.main-wrap
+
+    .about
+      .about__top
+        .about__top-inner
+          .about__title.custom-title-h1 About
+          .about__content
+            .about__left
+              .about__pen
+                img(src="./img/about/pan1.png").about__pen-img.active
+                img(src="./img/about/pan2.png").about__pen-img
+                img(src="./img/about/pan3.png").about__pen-img
+                img(src="./img/about/pan4.png").about__pen-img
+                img(src="./img/about/pan5.png").about__pen-img
+            .about__right
+              .about__steps
+                .about__step.active
+                  a(href="#") 0
+                .about__step
+                  a(href="#") 1
+                .about__step
+                  a(href="#") 2
+                .about__step
+                  a(href="#") 3
+                .about__step
+                  a(href="#") 4
+              .about__subtitle.block-title Geeks do it better We are
+              .about__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              .about__link.block-link See how it works
+
+          .about__scroll-to-wrap
+            a(href="#").about__scroll-to Scroll
+
+      .statistic
+        .statistic__inner
+          .statistic__title Statistics
+          .statistic__graph
+            .statistic__graph-i
+              .statistic__graph-i-inner
+              .statistic__graph-txt
+                .statistic__graph-title Bob Dramberg, NY
+                .statistic__graph-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .statistic__graph-i
+              .statistic__graph-i-inner
+              .statistic__graph-txt
+                .statistic__graph-title Bob Dramberg, NY
+                .statistic__graph-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .statistic__graph-i
+              .statistic__graph-i-inner
+              .statistic__graph-txt
+                .statistic__graph-title Bob Dramberg, NY
+                .statistic__graph-desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+
+      .home-view.home-view--about
+        .home-view__inner
+          .home-view__title Lorem ipsum dolor sit amet,
+          .home-view__btn
+            a(href="#").home-view__btn-i.site-btn-blue view pricing

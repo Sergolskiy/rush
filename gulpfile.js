@@ -85,6 +85,7 @@ gulp.task('js-libs', () => {
       // 'node_modules/aos/dist/aos.js',
       // 'node_modules/bootstrap/dist/js/bootstrap.js',
       // 'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
+      'node_modules/rellax/rellax.js',
       'src/js/sine-waves.js',
       'node_modules/blazy/blazy.min.js',
       'node_modules/inputmask/dist/jquery.inputmask.js',
