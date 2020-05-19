@@ -1036,6 +1036,16 @@ ul{
       margin-bottom: 20px;
     }
 
+    h4 {
+      font-size: 40px;
+      line-height: 46px;
+      margin-top: 48px;
+      letter-spacing: .8px;
+      font-family: 'Poppins';
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
   }
 
 }
@@ -1364,7 +1374,6 @@ ul{
 }
 
 
-
 .seo-head{
   padding-top: 190px;
 
@@ -1372,15 +1381,18 @@ ul{
     max-width: 1080px;
     margin: 0 auto;
     display: flex;
+    justify-content: center;
 
   }
 
   &__left{
     max-width: 450px;
+    margin-right: 65px;
   }
 
   &__title{
     margin-bottom: 15px;
+    line-height: 61px;
   }
 
   &__description{
@@ -1405,7 +1417,7 @@ ul{
   }
 
   &__right{
-
+    margin-right: -120px;
   }
 
   &__right-i{
@@ -1430,8 +1442,26 @@ ul{
 
 }
 
+
+.seo-page-content{
+  padding-top: 50px;
+  margin-bottom: -52px;
+
+  .custom-list-ul {
+    max-width: 100%;
+  }
+
+  .custom-item-ul{
+    margin-bottom: 2px;
+  }
+
+
+}
+
 .seo-blue{
-  width: 750px;
+  margin-top: 59px;
+  margin-bottom: 57px;
+  width: 100%;
   height: 250px;
   background: url("../img/seo/seo-blue.jpg") center center no-repeat;
   display: flex;
@@ -1456,9 +1486,47 @@ ul{
 
   &__btn-i{
     min-width: 145px;
-    line-height: 45px;
+    line-height: 41px;
     font-size: 12px;
     letter-spacing: 0.6px;
+  }
+
+  &--medium{
+    height: 200px;
+
+    .seo-blue__title{
+      max-width: 330px;
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &--small{
+    height: 150px;
+    flex-direction: row;
+    padding-top: 8px;
+
+    .seo-blue__title{
+      max-width: 230px;
+      font-size: 24px;
+      line-height: 34px;
+      margin-bottom: 0;
+      text-align: left;
+      position: relative;
+      margin-right: 15px;
+
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 19px;
+        height: calc(100% - 18px);
+        width: 3px;
+        background: #fff;
+      }
+    }
   }
 
 }
@@ -3366,6 +3434,89 @@ ul{
   }
 
   //1800 blog page media end
+
+
+  .seo-head{
+    padding-top: 137px;
+  }
+
+  .seo-head__inner{
+    max-width: 835px;
+  }
+
+  .seo-head__left {
+    margin-right: 0;
+  }
+
+  .seo-head__title{
+    margin-bottom: 7px;
+  }
+
+  .seo-head__description{
+    margin-bottom: 48px;
+  }
+
+  .seo-head__btn-i{
+    min-width: 153px;
+    line-height: 46px;
+    font-size: 12px;
+    letter-spacing: .6px;
+  }
+
+  .seo-head__btn-i:first-child {
+    margin-right: 25px;
+  }
+
+  .seo-head__right-i{
+    transform: scale(0.85);
+    top: -33px;
+    left: 0;
+  }
+
+  .seo-page-content {
+    padding-top: 0;
+    margin-bottom: -124px;
+  }
+
+  .seo-page-content .blog-posts__inner{
+    padding-top: 30px;
+  }
+
+  .seo-page-content .blog-posts__content {
+    max-width: 645px;
+    padding: 0;
+  }
+
+  .seo-page-content .blog-sidebar {
+    max-width: 385px;
+    right: -16px;
+  }
+
+  .seo-block__content h4 {
+    font-size: 34px;
+    line-height: 40px;
+    margin-top: 34px;
+    letter-spacing: .68px;
+    margin-bottom: 15px;
+  }
+
+  .seo-blue {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .seo-blue__title {
+    margin-bottom: 34px;
+    margin-top: -10px;
+  }
+
+  .seo-blue--medium .seo-blue__title {
+    max-width: 300px;
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    letter-spacing: .48px;
+  }
 
 }
 
