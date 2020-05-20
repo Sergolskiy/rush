@@ -1,0 +1,84 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage loadpage";
+  - var pageActive = "contact-page";
+
+block content
+
+
+  div.main-wrap
+
+    .contact
+      .contact__top
+        .contact__top-inner
+          .contact__title.custom-title-h1 contact
+          .contact__content
+            .contact__left
+              .contact__content-item
+                .contact__content-item-content
+                  .contact__content-item-title Phone:
+                  a(href="tel:18448595860").contact__content-item-link +1 (844) 859-5860
+              .contact__content-item
+
+                .contact__content-item-content
+                  .contact__content-item-content-inner
+                    .contact__content-item-title I haven't ordered yet.
+                    a(href="mailto:support@blablabla.com").contact__content-item-link support@blablabla.com
+                  .contact__content-item-content-inner
+                    .contact__content-item-title I have an order in progress.
+                    a(href="mailto:support@blablabla.com").contact__content-item-link sales@blablabla.com
+                  .contact__content-item-content-inner
+                    .contact__content-item-title I need clarification on payment.
+                    a(href="mailto:support@blablabla.com").contact__content-item-link billing@blablabla.com
+
+
+            .contact__right
+              img(src='./img/contact/img.png')
+
+
+      .form-block
+        .form-block__inner
+          .custom-form
+            .custom-form__inner
+              form(action="javascript:void(0)")
+                .custom-form__title Contact us
+                .custom-form__row
+                  .custom-form__radio
+                    .custom-form__radio-i
+                      input(type="radio" id='radio1' value='Getting started' name="type" checked)
+                      label(for="radio1" ) Getting started
+                    .custom-form__radio-i
+                      input(type="radio" id='radio2' value='My current order' name="type")
+                      label(for="radio2") My current order
+                    .custom-form__radio-i
+                      input(type="radio" id='radio3' value='Payment questions' name="type")
+                      label(for="radio3") Payment questions
+                .custom-form__row
+                  .custom-form__input.custom-form__input--w50
+                    input(type="text" placeholder="Name")
+                    span.error-message Error message
+                  .custom-form__input.custom-form__input--w50
+                    input(type="email" placeholder="Email").email-field
+                    span.error-message Error message
+                .custom-form__row
+                  .custom-form__textarea
+                    textarea(placeholder="Massege")
+                    span.error-message Error message
+                .custom-form__row
+                  .custom-form__input.custom-form__capcha
+                    input(type="text" placeholder="Capcha code")
+                    span.error-message Error message
+                    img(src="./img/contact/capcha.png")
+                .custom-form__btn
+                  a(href="#").site-btn-blue.custom-form__btn-i Order now
+
+
+
+
+      .home-view.home-view--contact
+        .home-view__inner
+          .home-view__title Lorem ipsum dolor sit amet,
+          .home-view__btn
+            a(href="#").home-view__btn-i.site-btn-blue view pricing
