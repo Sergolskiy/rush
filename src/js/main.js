@@ -64,7 +64,17 @@ $(document).ready(function () {
     $('.about__step').eq(i).addClass('active');
 
     $('.about__pen-img').removeClass('active');
-    $('.about__pen-img').eq(i).addClass('active');
+    $('.about__pen-img').eq((-1 * i) + 4).addClass('active');
+
+    if(i == 4){
+      $('.about__link').fadeIn();
+
+      $('.about__pen').addClass('last-pen');
+    } else {
+      $('.about__link').fadeOut();
+      $('.about__pen').removeClass('last-pen');
+    }
+
   });
 
 
@@ -164,7 +174,7 @@ $(document).ready(function () {
 
 
 
-  $('.custom-form__btn-i').click(function (e) {
+  $('.custom-form__btn-i, .footer__search-btn').click(function (e) {
     e.preventDefault();
 
 
@@ -174,18 +184,27 @@ $(document).ready(function () {
       var input = $(this).closest('form').find('input');
       var email = $(this).closest('form').find('.email-field').length > 0 ? $(this).closest('form').find('.email-field') : false;
 
+
       if(email.val() == "" && email !== false){
         // $(this).closest('form').addClass('error-field');
         email.parent().addClass('error-field');
         email.next().html('Please enter your email');
-        console.log(564);
-        // return;
+
+        if(email.closest('.footer__search-form').length > 0){
+          return;
+        }
+
       } else {
         if(reg.test(email.val()) == false) {
           // $(this).closest('form').addClass('error-field');
+          console.log(email.val());
           email.parent().addClass('error-field');
           input.next().html('Please enter a valid email address');
-          // return;
+
+          if(email.closest('.footer__search-form').length > 0){
+            return;
+          }
+
         } else {
           // $(this).closest('form').removeClass('error-field');
           email.parent().removeClass('error-field');
@@ -252,16 +271,24 @@ $(document).ready(function () {
       }
     });
 
-    if($(this).closest('form').find('.error-field').length === 0 && $(this).closest('.review__form').length > 0){
-      $('.review__form-success').addClass('active');
-      $('.review__form-contain').css('opacity', '0');
+    if($(this).closest('form').find('.error-field').length === 0 && $(this).closest('.custom-form').length > 0){
+      $('.custom-form__success').addClass('open');
     }
+
+    if($(this).closest('form').find('.error-field').length === 0 && $(this).closest('.footer__search-form').length > 0){
+      $('.footer__search-success').addClass('open');
+    }
+
+
+
   });
 
 
 
 
-
+  setTimeout(function () {
+    $('.seo-head__right').addClass('animation-seo');
+  }, 500);
 
 
 

@@ -23,11 +23,11 @@ block content
           .about__content
             .about__left
               .about__pen
-                img(src="./img/about/pan1.png").about__pen-img.active
+                img(src="./img/about/pan1.png").about__pen-img
+                img(src="./img/about/pan1.png").about__pen-img
                 img(src="./img/about/pan2.png").about__pen-img
                 img(src="./img/about/pan3.png").about__pen-img
-                img(src="./img/about/pan4.png").about__pen-img
-                img(src="./img/about/pan5.png").about__pen-img
+                img(src="./img/about/pan5.png").about__pen-img.active
             .about__right
               .about__steps
                 .about__step.active
@@ -42,7 +42,7 @@ block content
                   a(href="#") 4
               .about__subtitle.block-title Geeks do it better We are
               .about__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              .about__link.block-link See how it works
+              .about__link.block-link(style="display: none") See how it works
 
           .about__scroll-to-wrap
             a(href="#").about__scroll-to Scroll

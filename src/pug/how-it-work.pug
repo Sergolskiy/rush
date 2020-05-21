@@ -1,0 +1,63 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Home page";
+  - var pageClass = "homepage loadpage";
+  - var pageActive = "hiw-page";
+
+block content
+
+  div.main-wrap
+
+    .hiw
+      .hiw__top
+        .hiw__top-inner
+          .hiw__title.custom-title-h1 how it works
+          .hiw__content
+            .hiw__left
+              .hiw__animation
+                img(src="./img/hiw/hiw-anim.png")
+            .hiw__right
+              .hiw__steps
+                .hiw__step.active
+                  a(href="#") 1
+                .hiw__step
+                  a(href="#") 2
+                .hiw__step
+                  a(href="#") 3
+                .hiw__step
+                  a(href="#") 4
+                .hiw__step
+                  a(href="#") 5
+              .hiw__subtitle.block-title 1. Geeks do it better We are
+              .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              .hiw__link.block-link View pricing
+
+
+      .hiw-types
+        .hiw-types__inner
+          .hiw-types__item
+            .hiw-types__img
+              img(src="./img/hiw/types-1.svg")
+            .hiw-types__content
+              .hiw-types__title.block-title Geeks do ibetter
+              .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          .hiw-types__item
+            .hiw-types__img
+              img(src="./img/hiw/types-2.svg")
+            .hiw-types__content
+              .hiw-types__title.block-title Geeks do ibetter
+              .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          .hiw-types__item
+            .hiw-types__img
+              img(src="./img/hiw/types-3.svg")
+            .hiw-types__content
+              .hiw-types__title.block-title Geeks do ibetter
+              .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              .hiw-types__link.block-link See how it works
+
+      .home-view.home-view--hiw
+        .home-view__inner
+          .home-view__title Lorem ipsum dolor sit amet,
+          .home-view__btn
+            a(href="#").home-view__btn-i.site-btn-blue view pricing
