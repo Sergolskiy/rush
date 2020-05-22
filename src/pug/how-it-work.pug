@@ -2,56 +2,101 @@ extends _layout
 
 block vars
   - var pageTitle = "Home page";
-  - var pageClass = "homepage loadpage";
+  - var pageClass = "";
   - var pageActive = "hiw-page";
 
 block content
 
   div.main-wrap
-
+    .rellax(data-rellax-speed="-20")
     .hiw
       .hiw__top
         .hiw__top-inner
           .hiw__title.custom-title-h1 how it works
           .hiw__content
             .hiw__left
-              .hiw__animation
+              .hiw__animation.autoplay
                 img(src="./img/hiw/hiw-anim.png")
+                .hiw__animation-left
+                  .hiw__animation-svg.svg-anim-1
+                    include ../img/hiw/payper-left-1.svg
+                  .hiw__animation-plane
+                    img(src="./img/hiw/plane-left.png")
+                  .hiw__animation-svg.svg-anim-3
+                    include ../img/hiw/payper-left-2.svg
+                  .hiw__animation-plane
+                    img(src="./img/hiw/plane-left.png")
+                  .hiw__animation-svg.svg-anim-5
+                    include ../img/hiw/payper-left-3.svg
+                .hiw__animation-right
+                  .hiw__animation-svg.svg-anim-right-1
+                    include ../img/hiw/payper-right-1.svg
+                  .hiw__animation-svg.svg-anim-right-2
+                    include ../img/hiw/payper-right-2.svg
+                  .hiw__animation-plane-right
+                    img(src="./img/hiw/plane-right.png")
+                  .hiw__animation-svg.svg-anim-right-4
+                    include ../img/hiw/payper-right-3.svg
+                  .hiw__animation-plane-right
+                    img(src="./img/hiw/plane-right.png")
             .hiw__right
               .hiw__steps
-                .hiw__step.active
+                .hiw__step.first-step
+                  include ../img/hiw/border-tab.svg
                   a(href="#") 1
-                .hiw__step
+                .hiw__step.second-step
                   a(href="#") 2
-                .hiw__step
+                  include ../img/hiw/border-tab.svg
+                .hiw__step.third-step
                   a(href="#") 3
-                .hiw__step
+                  include ../img/hiw/border-tab.svg
+                .hiw__step.fourth-step
                   a(href="#") 4
-                .hiw__step
+                  include ../img/hiw/border-tab.svg
+                .hiw__step.fifth-step
                   a(href="#") 5
-              .hiw__subtitle.block-title 1. Geeks do it better We are
-              .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              .hiw__link.block-link View pricing
+                  include ../img/hiw/border-tab.svg
+              .hiw__top-text
+                .hiw__top-text-i.active
+                  .hiw__subtitle.block-title 1. Geeks do it better We are
+                  .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hiw__link.block-link View pricing
+                .hiw__top-text-i
+                  .hiw__subtitle.block-title 1. Geeks do it better We are 2
+                  .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hiw__link.block-link View pricing
+                .hiw__top-text-i
+                  .hiw__subtitle.block-title 1. Geeks do it better We are 3
+                  .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hiw__link.block-link View pricing
+                .hiw__top-text-i
+                  .hiw__subtitle.block-title 1. Geeks do it better We are 4
+                  .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hiw__link.block-link View pricing
+                .hiw__top-text-i
+                  .hiw__subtitle.block-title 1. Geeks do it better We are 5
+                  .hiw__caption.block-txt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  .hiw__link.block-link View pricing
 
 
       .hiw-types
         .hiw-types__inner
           .hiw-types__item
-            .hiw-types__img
-              img(src="./img/hiw/types-1.svg")
-            .hiw-types__content
+            .hiw-types__img.aos-init(data-aos="fade-right" data-aos-offset="200")
+              img(src="./img/hiw/types-1.svg" )
+            .hiw-types__content.aos-init(data-aos="fade-left" data-aos-offset="200")
               .hiw-types__title.block-title Geeks do ibetter
               .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
           .hiw-types__item
-            .hiw-types__img
+            .hiw-types__img.aos-init(data-aos="fade-left" data-aos-offset="200")
               img(src="./img/hiw/types-2.svg")
-            .hiw-types__content
+            .hiw-types__content.aos-init(data-aos="fade-right" data-aos-offset="200")
               .hiw-types__title.block-title Geeks do ibetter
               .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
           .hiw-types__item
-            .hiw-types__img
+            .hiw-types__img.aos-init(data-aos="fade-right" data-aos-offset="200")
               img(src="./img/hiw/types-3.svg")
-            .hiw-types__content
+            .hiw-types__content.aos-init(data-aos="fade-left" data-aos-offset="200")
               .hiw-types__title.block-title Geeks do ibetter
               .hiw-types__txt.block-txt Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
               .hiw-types__link.block-link See how it works

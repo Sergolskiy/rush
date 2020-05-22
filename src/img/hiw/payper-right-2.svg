@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 130.9 245" style="enable-background:new 0 0 130.9 245;" xml:space="preserve">
+<style type="text/css">
+	.payper-right-2{clip-path:url(#payper-right-1-polig-2-2);fill:url(#payper-right-1-polig-3-2);}
+	.payper-right-2-2{fill:none;stroke:#283645;stroke-width:8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;}
+</style>
+<g>
+	<defs>
+		<polygon id="payper-right-1-polig-3-1" points="6,169.3 130.9,245 124.9,75.7 0,0 		"/>
+	</defs>
+	<clipPath id="payper-right-1-polig-2-2">
+		<use xlink:href="#payper-right-1-polig-3-1"  style="overflow:visible;"/>
+	</clipPath>
+
+		<linearGradient id="payper-right-1-polig-3-2" gradientUnits="userSpaceOnUse" x1="0" y1="244.98" x2="1" y2="244.98" gradientTransform="matrix(-175.6322 124.1623 -109.7469 -164.7694 27039.0508 40425.625)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#E9E9E9"/>
+	</linearGradient>
+	<polygon class="payper-right-2" points="89,-62.9 -110.9,78.4 41.9,307.9 241.8,166.6 	"/>
+</g>
+	<line class="payper-right-2-2" x1="33.1" y1="50.2" x2="101.6" y2="91.5"/>
+	<line class="payper-right-2-2" x1="109.3" y1="118.3" x2="16.7" y2="62.4"/>
+	<path class="payper-right-2-2" d="M109.3,118.3L16.7,62.4 M109.3,139.3L16.7,83.4 M109.3,160.3l-92.6-55.9"/>
+	<path class="payper-right-2-2" d="M109.3,181.3l-92.6-55.9 M109.3,202.3l-92.6-55.9"/>
+</svg>

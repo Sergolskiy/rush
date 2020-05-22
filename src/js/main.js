@@ -291,10 +291,196 @@ $(document).ready(function () {
   }, 500);
 
 
+  var timeArr = [];
 
+  $('.first-step').click(function (e) {
+    e.preventDefault();
+
+
+    skipStep(0);
+
+    $('.svg-anim-1').addClass('active');
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-1').addClass('plane');
+    }, 1500);
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-1').addClass('plane-end');
+    }, 2500);
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-1').addClass('active');
+    }, 3500);
+
+
+
+    if($('.hiw__animation').hasClass('autoplay')){
+      timeArr[timeArr.length + 1] = setTimeout(function () {
+        $('.second-step').click();
+      }, 4000);
+    }
+
+  });
+
+  $('.second-step').click(function (e) {
+    e.preventDefault();
+
+    skipStep(1);
+
+    $('.svg-anim-right-2').addClass('active');
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-2').addClass('plane');
+    }, 1500);
+
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-2').addClass('plane-end');
+
+    }, 2500);
+
+
+    if($('.hiw__animation').hasClass('autoplay')){
+      timeArr[timeArr.length + 1] = setTimeout(function () {
+        $('.third-step').click();
+      }, 3300);
+    }
+
+  });
+
+  $('.third-step').click(function (e) {
+    e.preventDefault();
+
+
+
+    skipStep(1);
+
+    $('.svg-anim-3').addClass('active');
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-3').addClass('plane');
+    }, 2000);
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-3').addClass('plane-end');
+    }, 3000);
+
+
+
+    if($('.hiw__animation').hasClass('autoplay')){
+      timeArr[timeArr.length + 1] = setTimeout(function () {
+        $('.fourth-step').click();
+      }, 3800);
+    }
+
+
+  });
+
+  $('.fourth-step').click(function (e) {
+    e.preventDefault();
+
+    skipStep(2);
+
+    $('.svg-anim-right-4').addClass('active');
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-4').addClass('add');
+    }, 2500);
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-4').addClass('plane');
+    }, 4000);
+
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-4').addClass('plane-end');
+    }, 5000);
+
+
+    if($('.hiw__animation').hasClass('autoplay')){
+      timeArr[timeArr.length + 1] = setTimeout(function () {
+        $('.fifth-step').click();
+      }, 5800);
+    }
+
+  });
+
+  $('.fifth-step').click(function (e) {
+    e.preventDefault();
+
+
+
+    skipStep(2);
+
+    $('.svg-anim-5').addClass('active');
+
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-5').addClass('plane');
+    }, 1500);
+
+  });
+
+
+  function skipStep(i) {
+    timeArr.forEach(function (i, e) {
+      clearTimeout(i);
+    });
+    timeArr = [];
+
+    $('.hiw__animation-left .hiw__animation-svg').each(function (index) {
+
+      if(i !== index){
+
+        var that = $(this);
+
+        setTimeout(function () {
+          that.addClass('hide-anim');
+          that.removeClass('active plane plane-end');
+        },500);
+
+        setTimeout(function () {
+          that.removeClass('hide-anim');
+        },600);
+      }
+    });
+
+    $('.hiw__animation-right .hiw__animation-svg').each(function (index) {
+      if(i !== index){
+        var that = $(this);
+        console.log(index);
+
+        if(index === 1){
+          // $(this).addClass('hide-anim');
+        }
+
+        setTimeout(function () {
+          that.addClass('hide-anim');
+          that.removeClass('active plane plane-end add');
+        },500);
+
+        setTimeout(function () {
+          that.removeClass('hide-anim');
+        },600);
+      }
+    });
+  }
+
+  setTimeout(function () {
+    $('.first-step').click();
+  }, 300);
+
+  $('.hiw__step').click(function () {
+    $('.hiw__step').removeClass('active');
+    $(this).addClass('active');
+
+    $('.hiw__top-text-i').removeClass('active');
+    $('.hiw__top-text-i').eq($(this).index()).addClass('active');
+  });
 
   var rellax = new Rellax('.rellax');
 
+  AOS.init();
 });
 
 

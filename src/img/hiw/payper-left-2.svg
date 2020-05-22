@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 171 292.2" style="enable-background:new 0 0 171 292.2;" xml:space="preserve">
+<style type="text/css">
+	.payper-left-2-1{clip-path:url(#payper-left-polig-2-2);fill:url(#payper-left-polig-2-3);}
+	.payper-left-2-2{fill:none;stroke:#283645;stroke-width:8;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;}
+	.payper-left-2-3{fill:none;stroke:#937AE3;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;}
+
+		.payper-left-2-4{clip-path:url(#payper-left-polig-2-5);fill:none;stroke:#937AE3;stroke-width:12;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:10;}
+</style>
+<g>
+	<defs>
+		<polygon id="payper-left-polig-2-1" points="23.1,104.1 0,292.2 147.9,188.1 171,0 		"/>
+	</defs>
+	<clipPath id="payper-left-polig-2-2">
+		<use xlink:href="#payper-left-polig-2-1"  style="overflow:visible;"/>
+	</clipPath>
+
+		<linearGradient id="payper-left-polig-2-3" gradientUnits="userSpaceOnUse" x1="0" y1="292.2" x2="1" y2="292.2" gradientTransform="matrix(170.969 128.834 128.834 -170.969 -37645.2891 50038.8242)">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#E9E9E9"/>
+	</linearGradient>
+	<polygon class="payper-left-2-1" points="61.9,-82.2 311.4,105.8 109.1,374.4 -140.4,186.4 	"/>
+</g>
+<line class="payper-left-2-2" x1="53.4" y1="116.8" x2="124.4" y2="69"/>
+<line class="payper-left-2-2" x1="32.6" y1="154.9" x2="144.3" y2="80.6"/>
+<line class="payper-left-2-2" x1="29.6" y1="178.9" x2="141.3" y2="104.6"/>
+<line class="payper-left-2-2" x1="26.6" y1="201.9" x2="138.3" y2="127.6"/>
+<line class="payper-left-2-2" x1="24.6" y1="224.9" x2="136.3" y2="150.6"/>
+<line class="payper-left-2-2" x1="22.6" y1="246.9" x2="134.3" y2="172.6"/>
+<line class="payper-left-2-3" x1="33.6" y1="153.9" x2="79.5" y2="123.4"/>
+<line class="payper-left-2-3" x1="76.6" y1="168.9" x2="122.5" y2="138.4"/>
+<line class="payper-left-2-4" x1="22.6" y1="246.9" x2="68.5" y2="216.4"/>
+<g>
+	<defs>
+		<rect id="payper-left-polig-2-4" width="171" height="292.2"/>
+	</defs>
+	<clipPath id="payper-left-polig-2-5">
+		<use xlink:href="#payper-left-polig-2-4"  style="overflow:visible;"/>
+	</clipPath>
+</g>
+</svg>
