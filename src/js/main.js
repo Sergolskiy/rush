@@ -22,7 +22,8 @@ $(document).ready(function () {
     items: 1,
     nav: false,
     dots: true,
-    margin: 20
+    margin: 20,
+    loop: true
   });
 
   $('.typewriter__mashine-btn-i').click(function (e) {
@@ -146,21 +147,34 @@ $(document).ready(function () {
 
 
   var target = $('.pricing-geeks__inner').length > 0 ? $('.pricing-geeks__inner') : false;
-  var target2 = $('.statistic__graph').length > 0 ? $('.statistic__graph') : false;;
+  var target2 = $('.statistic__graph').length > 0 ? $('.statistic__graph') : false;
+  var target3 = $('.home-view').length > 0 ? $('.home-view') : false;
+
   var targetPos = target !== false ? target.offset().top : 0;
   var targetPos2 = target2 !== false ? target2.offset().top : 0;
+  var targetPos3 = target3 !== false ? target3.offset().top : 0;
+
   var winHeight = $(window).height();
+
   var scrollToElem = targetPos - winHeight;
   var scrollToElem2 = targetPos2 - winHeight;
+  var scrollToElem3 = targetPos3 - winHeight;
+
   $(window).scroll(function(){
     var winScrollTop = $(this).scrollTop();
     if(winScrollTop > scrollToElem + 200){
       // console.log(123);
       $('.pricing-geeks__animation').find('svg').addClass('animate');
     }
+
     if(winScrollTop > scrollToElem2 + 200){
-      console.log(123);
       $('.statistic__graph').addClass('animate');
+    }
+
+    if(winScrollTop > scrollToElem3 + 400){
+      $('.home-view').addClass('active');
+    } else {
+      $('.home-view').removeClass('active');
     }
   });
 
@@ -271,6 +285,7 @@ $(document).ready(function () {
       }
     });
 
+
     if($(this).closest('form').find('.error-field').length === 0 && $(this).closest('.custom-form').length > 0){
       $('.custom-form__success').addClass('open');
     }
@@ -284,6 +299,9 @@ $(document).ready(function () {
   });
 
 
+  $('.footer__search-wrap').click(function () {
+    $(this).removeClass('error-field');
+  });
 
 
   setTimeout(function () {

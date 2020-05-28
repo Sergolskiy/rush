@@ -81,9 +81,12 @@ ul{
 input{
   transition: 0.3s;
 
-  &:active{
+  &:focus{
     border-color: #5b6e7b !important;
     color: #163143 !important;
+  }
+  &:active{
+    border-color: #5b6e7b !important;
   }
 
 }
@@ -225,6 +228,7 @@ input{
   letter-spacing: 1.08px;
   font-family: 'Poppins';
   font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .block-txt {
@@ -536,10 +540,18 @@ input{
     font-family: 'Poppins';
     position: relative;
     z-index: 2;
+    //position: relative;
+    //left: 32px;
+    letter-spacing: 6px;
+  }
+
+  &__caption{
+    max-width: 475px;
+    margin: 50px auto 0;
   }
 
   &__btn{
-    margin-top: 225px;
+    margin-top: 125px;
     position: relative;
     z-index: 2;
   }
@@ -548,6 +560,7 @@ input{
     font-size: 18px;
     line-height: 70px;
     min-width: 228px;
+    letter-spacing: 0.9px;
   }
 
   &__pencil{
@@ -559,8 +572,15 @@ input{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: pulsing 7s infinite;
+    //animation: pulsing 8s infinite linear;
     margin-top: -95px;
+
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
   }
 }
 
@@ -573,6 +593,18 @@ input{
   }
   100% {
     transform: scale(0.9, 0.9) translate(-50%, -50%)  rotate(0deg);
+  }
+}
+
+@keyframes floating {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  55% {
+    transform: translate(-50%, calc(-50% + 15px));
+  }
+  to {
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -599,7 +631,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    //cursor: pointer;
     position: relative;
     background: white;
     transition: 0.3s;
@@ -629,19 +661,24 @@ input{
       transform: translateY(100px);
       transition: 0.3s;
       transition-property: transform, opacity;
-      transition-delay: 0.3s, 0.1s;
+      transition-delay: 0.3s;
     }
 
     &:hover{
       background: #b2f7e9;
       transition-delay: 0.3s;
-      box-shadow: 4.848px 8.746px 26.97px 2.03px rgba(66, 115, 104, 0.15);
+      //box-shadow: 4.848px 8.746px 26.97px 2.03px rgba(66, 115, 104, 0.15);
+      box-shadow: 4.85px 8.75px 49.97px 2.03px rgba(66,115,104,.15);
 
       &:after,
       &:before{
-        transform: translateY(-50%);
-        transition-delay: 0s, 0.1s;
+        transform: translateY(-35px);
+        transition-delay: 0s;
         opacity: 0;
+      }
+
+      &:after{
+        transform: translateY(35px);
       }
 
       .home-card__txt{
@@ -729,17 +766,33 @@ input{
   }
 
   &__left{
+    position: relative;
     max-width: 550px;
     padding-left: 25px;
   }
 
   &__desc-i{
-    display: none;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.3s, transform 5s;
+    transition-delay: 0s;
+
+    &:nth-child(n+2){
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     &.show{
-      display: block;
+      transform: translateX(0);
+      opacity: 1;
+      transition: opacity 0.3s, transform 0.5s;
+      transition-delay: 0.5s;
     }
   }
+
 
   &__title{
     //font-size: 54px;
@@ -836,6 +889,7 @@ input{
     width: 75px;
     height: 75px;
     //transform: translate(-50%, -50%);
+    animation: beat 2s ease 0s infinite;
 
 
     &.key{
@@ -869,6 +923,7 @@ input{
       background: #9a82e8;
       opacity: .44;
       border-radius: 50%;
+      transition: 0.5s;
     }
 
     span{
@@ -883,6 +938,7 @@ input{
       //transform: translate(-50%, -50%);
       background: #9a82e8;
       border-radius: 50%;
+      transition: 0.5s;
     }
 
     &:after{
@@ -898,8 +954,58 @@ input{
       //transform: translate(-50%, -50%);
       background: white;
       border-radius: 50%;
+      transition: 0.5s;
     }
 
+    &:hover{
+      width: 125px;
+      height: 125px;
+
+
+      &.key{
+        margin-top: 24px;
+        margin-left: -31px;
+      }
+
+
+      &.top{
+        margin-top: -213px;
+        margin-left: -60px;
+      }
+
+      &.body{
+        margin-top: -170px;
+        margin-left: 126px;
+      }
+
+      &:before{
+        content: "";
+        width: 125px;
+        height: 125px;
+        margin-top: -62px;
+        margin-left: -62px;
+        background: white;
+        opacity: .24;
+      }
+
+      span{
+        width: 85px;
+        height: 85px;
+        margin-top: -42px;
+        margin-left: -42px;
+        display: block;
+      }
+
+      &:after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        display: block;
+      }
+
+    }
 
     &.active{
       position: absolute;
@@ -908,8 +1014,8 @@ input{
       animation: beat 1.5s ease 0s infinite;
 
       &.key{
-        margin-top: 27px;
-        margin-left: -30px;
+        margin-top: 24px;
+        margin-left: -31px;
       }
 
 
@@ -1127,13 +1233,20 @@ input{
     .owl-dot{
       width: 17px;
       height: 17px;
+      transform: scale(0.8);
       border-radius: 50%;
       border: 2px solid white !important;
       margin: 0 15px;
+      transition: 0.3s;
+
+      &:hover{
+        background: white !important;
+      }
 
       &.active{
         background: white !important;
         box-shadow: 0px 5px 8.37px 0.63px rgba(85, 161, 144, 0.15);
+        transform: scale(1);
       }
     }
   }
@@ -1170,6 +1283,7 @@ input{
     letter-spacing: 0.48px;
     font-weight: 700;
     margin-top: 60px;
+    font-family: Poppins;
   }
 
 }
@@ -1205,6 +1319,7 @@ input{
       font-weight: 700;
       margin-bottom: 33px;
       margin-top: 0;
+      letter-spacing: 2.7px;
     }
 
     p {
@@ -1228,6 +1343,7 @@ input{
       font-weight: 700;
       margin-top: 40px;
       margin-bottom: 20px;
+      letter-spacing: 2.2px;
     }
 
     h4 {
@@ -1269,6 +1385,14 @@ input{
   margin-top: 160px;
   margin-top: 188px;
   margin-bottom: 240px;
+  transition: 0.3s;
+
+
+  transform: scale(0.8);
+
+  &.active{
+    transform: scale(1);
+  }
 
   &__inner{
     display: flex;
@@ -1321,6 +1445,10 @@ input{
     border-radius: 40px;
   }
 
+  &--about{
+    position: relative;
+    z-index: 1;
+  }
 }
 
 
@@ -4175,6 +4303,7 @@ input{
     font-size: 18px;
     font-weight: 600;
     margin-right: 30px;
+    cursor: pointer;
 
     &:last-child{
       margin-right: 0;
@@ -4374,6 +4503,7 @@ input{
   .home-top__txt {
     font-size: 95px;
     line-height: 110px;
+    letter-spacing: 3px;
   }
 
   .home-top {
@@ -4412,7 +4542,12 @@ input{
   }
 
   .home-top__btn {
-    margin-top: 160px;
+    margin-top: 79px;
+  }
+
+  .home-top__caption{
+    max-width: 404px;
+    margin: 28px auto 0;
   }
 
   .home-card__item-wrap {
@@ -5636,6 +5771,18 @@ input{
 
 @media (max-width: 1220px) {
 
+  .home-card__item-wrap:hover .home-card__txt{
+    padding-top: 19px;
+    padding-bottom: 57px;
+  }
+
+  .shield__wrap:before {
+    width: 407px;
+    height: 450px;
+    top: -17px;
+    left: -36px;
+  }
+
   .header__mobile-menu{
     display: block;
     width: 28px;
@@ -5867,9 +6014,26 @@ input{
     letter-spacing: 0.48px;
     padding-bottom: 15px;
     border-bottom: 2px solid transparent;
+    position: relative;
+
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      height: 2px;
+      background: #253444;
+      transform: translateX(-50%);
+      width: 0;
+      transition: 0.3s;
+    }
+
 
     &.active{
-      border-bottom: 2px solid #3a4756;
+      //border-bottom: 2px solid #3a4756;
+      &:after{
+        width: 100%;
+      }
     }
   }
 
@@ -7777,9 +7941,20 @@ input{
 }
 
 @media (max-width: 420px) {
+
+  .home-top__caption{
+    margin: 10px auto 0;
+    max-width: 235px;
+  }
+
+  .home-top__btn{
+    margin-top: 30px;
+  }
+
   .home-top__txt {
     font-size: 30px;
     line-height: 42px;
+    letter-spacing: 1px;
   }
 
   .home-top__inner{
@@ -7788,7 +7963,7 @@ input{
   }
 
   .home-top__txt{
-    max-width: 200px;
+    max-width: 220px;
     margin: 0 auto;
   }
 
@@ -7809,9 +7984,14 @@ input{
 
   .home-card__list-tab-i {
     font-size: 16px;
-    width: 100%;
+    width: auto;
     letter-spacing: .32px;
     padding-bottom: 9px;
+    text-align: left;
+
+    &:nth-child(2){
+      text-align: center;
+    }
   }
 
   .home-card__item-wrap{
@@ -7833,8 +8013,17 @@ input{
     padding-bottom: 34px;
   }
 
+  .home-card__item-wrap:hover .home-card__txt{
+    padding-top: 5px;
+    padding-bottom: 34px;
+  }
+
   .home-card__item-wrap .home-card__txt {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+  }
+
+  .home-card__item-wrap .home-card__txt {
+    padding-top: 7px;
   }
 
   .typewriter{
