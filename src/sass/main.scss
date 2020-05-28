@@ -130,6 +130,58 @@ input{
   }
 }
 
+@keyframes elasticus {
+  0% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 0);
+  }
+  50% {
+    transform-origin: 0% 0%;
+    transform: scale(1, 1);
+  }
+  50.1% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform-origin: 0% 100%;
+    transform: scale(1, 0);
+  }
+}
+
+.animated {
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+
+
+
+
 .site-btn-violet{
   background: #9a82e8;
   border-radius: 40px;
@@ -707,6 +759,7 @@ input{
     font-size: 52px;
     line-height: 52px;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
     font-family: 'Poppins';
     font-weight: 700;
   }
@@ -1303,6 +1356,7 @@ input{
     font-size: 54px;
     line-height: 64px;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
     font-family: 'Poppins';
     font-weight: 700;
     text-align: center;
@@ -1408,12 +1462,13 @@ input{
   &__title{
     font-size: 58px;
     line-height: 76px;
-    letter-spacing: 1.16px;
+    //letter-spacing: 1.16px;
     max-width: 620px;
     margin: 0 auto;
     text-align: center;
     font-family: 'Poppins';
     font-weight: 700;
+    letter-spacing: 2.38px;
 
     position: relative;
     padding-bottom: 30px;
@@ -1745,6 +1800,7 @@ input{
     font-size: 54px;
     line-height: 64px;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
   }
 
   &__caption{
@@ -2347,6 +2403,7 @@ input{
     font-size: 54px;
     line-height: 52px;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
     font-family: 'Poppins';
     font-weight: 700;
     margin-bottom: 58px;
@@ -3304,6 +3361,33 @@ input{
     height: 100%;
   }
 
+  &__subtitle-wrap{
+    position: relative;
+  }
+
+  &__subtitle-item{
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.3s, transform 5s;
+    transition-delay: 0s;
+
+    &:nth-child(n+2){
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &.active{
+      transform: translateX(0);
+      opacity: 1;
+      transition: opacity 0.3s, transform 0.5s;
+      transition-delay: 0.5s;
+    }
+
+  }
+
   &__title{
     position: relative;
     padding-bottom: 35px;
@@ -3367,8 +3451,14 @@ input{
         opacity: 0;
       }
 
+      .about__pen-img:first-child{
+        opacity: 1;
+        transform: translate(-79px, 40px) scale(1.3);
+        transition-delay: 0.3s;
+      }
+
       &:before{
-        background: url("../img/about/big-pan.png") center center no-repeat;
+        background: url("../img/about/no-pan.png") center center no-repeat;
       }
 
       &:after{
@@ -3401,6 +3491,13 @@ input{
       opacity: 0;
     }
 
+    &.opacity{
+      opacity: 0;
+    }
+    &.opacity ~ img{
+      opacity: 0;
+    }
+
 
   }
 
@@ -3426,6 +3523,7 @@ input{
     height: 42px;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &:after{
       content: "";
@@ -3458,9 +3556,10 @@ input{
         background: #253444;
         border: 1px solid #253444;
         color: white;
-        font-size: 21px;
-        width: 43px;
-        height: 42px;
+        //font-size: 21px;
+        //width: 43px;
+        //height: 42px;
+        transform: scale(1.162);
         margin: 0;
       }
 
@@ -3504,6 +3603,7 @@ input{
     font-size: 54px;
     line-height: 64px;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
   }
 
 
@@ -3528,6 +3628,7 @@ input{
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    margin-left: 20px;
 
     &:before{
       content: "";
@@ -3536,6 +3637,7 @@ input{
       width: 1px;
       background: #253444;
       margin-bottom: 10px;
+      animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
     }
   }
 
@@ -3559,6 +3661,7 @@ input{
     font-size: 54px;
     font-weight: 700;
     letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
     font-family: Poppins;
     margin-bottom: 75px;
     padding-bottom: 55px;
@@ -4398,7 +4501,8 @@ input{
     margin-bottom: 21px;
     font-size: 54px;
     line-height: 64px;
-    letter-spacing: 1.08px;
+    //letter-spacing: 1.08px;
+    letter-spacing: 2.38px;
   }
 
 
@@ -5437,6 +5541,7 @@ input{
   .about__top {
     padding-top: 126px;
     padding-bottom: 18px;
+    min-height: 760px;
   }
 
   .about__title{
@@ -5474,9 +5579,10 @@ input{
   }
 
   .about__step.active a{
-    font-size: 18px;
-    width: 37px;
-    height: 37px;
+    //font-size: 18px;
+    //width: 37px;
+    //height: 37px;
+    transform: scale(1.2334);
   }
 
   .about__step {
@@ -6641,6 +6747,7 @@ input{
     padding-top: 102px;
     height: auto;
     min-height: auto;
+    padding-bottom: 45px;
   }
 
   .about__title {
@@ -6712,7 +6819,7 @@ input{
   }
 
   .statistic__graph-i:nth-child(2) .statistic__graph-txt{
-    margin-left: -149px;
+    margin-left: -163px;
     margin-top: -334px;
   }
 
@@ -6737,7 +6844,7 @@ input{
   .statistic__graph-i:nth-child(2) .statistic__graph-txt:after,
   .statistic__graph-i:nth-child(2) .statistic__graph-txt:before{
     top: 100%;
-    margin-right: 19px;
+    margin-right: 6px;
   }
 
   .statistic__graph-txt:before {
@@ -7612,7 +7719,7 @@ input{
   }
 
   .statistic__graph-txt{
-    width: 265px;
+    width: 240px;
   }
 
   .statistic__graph-i:nth-child(1) .statistic__graph-txt{
@@ -7629,7 +7736,7 @@ input{
 
   .statistic__graph-i:nth-child(3) .statistic__graph-txt{
     text-align: right;
-    margin-left: -243px;
+    margin-left: -215px;
     margin-top: 248px;
   }
 
@@ -7671,7 +7778,8 @@ input{
   }
   .statistic__graph-i:nth-child(3) .statistic__graph-txt:after,
   .statistic__graph-i:nth-child(3) .statistic__graph-txt:before {
-    right: 9%;
+    //right: 9%;
+    right: 13%;
   }
 
 
