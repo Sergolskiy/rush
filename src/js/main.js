@@ -210,10 +210,15 @@ $(document).ready(function () {
 
       } else {
         if(reg.test(email.val()) == false) {
+          console.log(email.attr('type', 'email'));
           // $(this).closest('form').addClass('error-field');
           console.log(email.val());
           email.parent().addClass('error-field');
-          input.next().html('Please enter a valid email address');
+
+
+          email.attr('type').value == 'email'
+            ? input.next().html('Please enter a valid email address')
+            : null;
 
           if(email.closest('.footer__search-form').length > 0){
             return;
@@ -222,6 +227,7 @@ $(document).ready(function () {
         } else {
           // $(this).closest('form').removeClass('error-field');
           email.parent().removeClass('error-field');
+          email.parent().addClass('correct');
           $('.subscribe-form-success').addClass('active');
           // return;
         }

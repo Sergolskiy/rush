@@ -90,12 +90,14 @@ input{
   }
 
 }
-.correct input{
+.correct input,
+.correct textarea{
   color: #5b6e7b !important;
   border-color: #aef7e9 !important;
 }
 
-.error-field input{
+.error-field input,
+.error-field textarea{
   color: #5b6e7b !important;
   border-color: #ee789a !important;
 }
@@ -1788,6 +1790,8 @@ input{
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 65px;
+    font-family: 'Poppins';
+    letter-spacing: .038px;
   }
 
   &__btn{
@@ -2466,7 +2470,7 @@ input{
         content: "";
         height: 2px;
         width: 0;
-        background: #253444;
+        background: #a6acb1;
         position: absolute;
         top: -10px;
         left: 50%;
@@ -2479,13 +2483,26 @@ input{
         content: "";
         height: 2px;
         width: 0;
-        background: #253444;
+        background: #a6acb1;
         position: absolute;
         bottom: -16px;
         left: 50%;
         transform: translateX(-50%);
         transition: 0.3s;
         display: block;
+      }
+
+      &:hover{
+        color: #163143;
+      }
+
+      &:active{
+        color: #163143;
+
+        &:before, &:after{
+          background: #a6acb1;
+          width: 38px;
+        }
       }
     }
 
@@ -2499,6 +2516,7 @@ input{
         &:before,
         &:after{
           width: 38px;
+          background: #253444;
         }
       }
     }
@@ -2612,6 +2630,7 @@ input{
 .error-message{
   position: absolute;
   bottom: -15px;
+  white-space: nowrap;
 }
 
 .block-btn{
@@ -3830,6 +3849,15 @@ input{
     font-weight: 600;
     letter-spacing: 0.56px;
     margin-bottom: 34px;
+    transition: .3s;
+
+    &:hover{
+      color: #a483ec;
+    }
+
+    &:active{
+      color: #c2aef2;
+    }
   }
 
 
