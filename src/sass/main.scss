@@ -478,6 +478,10 @@ input{
     &:active{
       color: #c2aef2;
     }
+
+    &--active{
+      color: #a483ec;
+    }
   }
 
   &__submenu{
