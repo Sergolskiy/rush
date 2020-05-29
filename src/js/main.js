@@ -340,7 +340,7 @@ $(document).ready(function () {
     e.preventDefault();
 
 
-    skipStep(0);
+    skipStep(0, 0);
 
     $('.svg-anim-1').addClass('active');
 
@@ -356,12 +356,16 @@ $(document).ready(function () {
       $('.svg-anim-right-1').addClass('active');
     }, 3500);
 
+    timeArr[timeArr.length + 1] = setTimeout(function () {
+      $('.svg-anim-right-2').addClass('open');
+    }, 4100);
+
 
 
     if($('.hiw__animation').hasClass('autoplay')){
       timeArr[timeArr.length + 1] = setTimeout(function () {
         $('.second-step').click();
-      }, 4000);
+      }, 4200);
     }
 
   });
@@ -369,7 +373,7 @@ $(document).ready(function () {
   $('.second-step').click(function (e) {
     e.preventDefault();
 
-    skipStep(1);
+    skipStep(-1, 1);
 
     $('.svg-anim-right-2').addClass('active');
 
@@ -397,7 +401,7 @@ $(document).ready(function () {
 
 
 
-    skipStep(1);
+    skipStep(1, -1);
 
     $('.svg-anim-3').addClass('active');
 
@@ -423,7 +427,7 @@ $(document).ready(function () {
   $('.fourth-step').click(function (e) {
     e.preventDefault();
 
-    skipStep(2);
+    skipStep(-1, 2);
 
     $('.svg-anim-right-4').addClass('active');
 
@@ -454,7 +458,7 @@ $(document).ready(function () {
 
 
 
-    skipStep(2);
+    skipStep(2, -1);
 
     $('.svg-anim-5').addClass('active');
 
@@ -465,7 +469,7 @@ $(document).ready(function () {
   });
 
 
-  function skipStep(i) {
+  function skipStep(left, right) {
     timeArr.forEach(function (i, e) {
       clearTimeout(i);
     });
@@ -473,38 +477,38 @@ $(document).ready(function () {
 
     $('.hiw__animation-left .hiw__animation-svg').each(function (index) {
 
-      if(i !== index){
+      if(left !== index){
+        console.log('left');
 
         var that = $(this);
 
-        setTimeout(function () {
+        // setTimeout(function () {
           that.addClass('hide-anim');
           that.removeClass('active plane plane-end');
-        },500);
+        // },500);
 
         setTimeout(function () {
           that.removeClass('hide-anim');
-        },600);
+        },100);
       }
     });
 
     $('.hiw__animation-right .hiw__animation-svg').each(function (index) {
-      if(i !== index){
+      if(right !== index){
         var that = $(this);
-        console.log(index);
 
         if(index === 1){
           // $(this).addClass('hide-anim');
         }
 
-        setTimeout(function () {
+        // setTimeout(function () {
           that.addClass('hide-anim');
-          that.removeClass('active plane plane-end add');
-        },500);
+          that.removeClass('active plane plane-end add open');
+        // },500);
 
         setTimeout(function () {
           that.removeClass('hide-anim');
-        },600);
+        },100);
       }
     });
   }
@@ -513,7 +517,12 @@ $(document).ready(function () {
     $('.first-step').click();
   }, 300);
 
+  $('.hiw__step').mouseup(function () {
+    $('.hiw__animation').removeClass('autoplay');
+  });
+
   $('.hiw__step').click(function () {
+
     $('.hiw__step').removeClass('active');
     $(this).addClass('active');
 
