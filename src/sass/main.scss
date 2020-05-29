@@ -2726,7 +2726,7 @@ input{
   }
 }
 
-.custom-txt-link{
+.custom-txt-link, .blog-item p > a{
   font-size: 21px;
   color: #253444;
   line-height: 33px;
@@ -2740,7 +2740,7 @@ input{
     background: #253444;
     height: 1px;
     width: 100%;
-    bottom: 2px;
+    bottom: 5px;
     left: 0;
     position: absolute;
   }
@@ -3036,6 +3036,15 @@ input{
     line-height: 26px;
     letter-spacing: .4px;
     margin-bottom: 10px;
+    transition: .3s;
+
+    &:hover{
+      color: #a483ec;
+    }
+
+    &:active{
+      color: #c2aef2;
+    }
 
     &:last-child{
       margin-bottom: 0;
@@ -3259,7 +3268,7 @@ input{
     margin-bottom: 70px;
   }
 
-  &__title{
+  &__title, h1{
     font-family: 'Poppins';
     font-weight: 700;
     color: #253444;
@@ -3267,6 +3276,7 @@ input{
     line-height: 56px;
     letter-spacing: 0.92px;
     margin-bottom: 28px;
+    margin-top: 0;
   }
 
   &__img{
@@ -3287,7 +3297,7 @@ input{
     margin: 13px 0;
   }
 
-  &__subtitle{
+  &__subtitle, h2{
     font-family: 'Poppins';
     font-weight: 700;
     color: #253444;
@@ -3295,6 +3305,7 @@ input{
     line-height: 46px;
     letter-spacing: 0.9px;
     padding: 22px 0 13px;
+    margin: 0;
   }
 
   &__quote{
@@ -3318,7 +3329,7 @@ input{
 
   }
 
-  &__subtitle-h5{
+  &__subtitle-h3, h3{
     color: #253444;
     font-size: 24px;
     line-height: 32px;
@@ -3326,6 +3337,7 @@ input{
     font-family: 'Poppins';
     font-weight: 700;
     margin-bottom: 19px;
+    margin-top: 0;
   }
 
   &__block-btn{
@@ -5313,7 +5325,7 @@ input{
     left: 0;
   }
 
-  .blog-item__title{
+  .blog-item__title, .blog-item h1{
     font-size: 40px;
     line-height: 48px;
     letter-spacing: .8px;
@@ -5335,7 +5347,7 @@ input{
     margin: 12px 0;
   }
 
-  .blog-item__subtitle{
+  .blog-item__subtitle, .blog-item h2{
     font-size: 34px;
     line-height: 40px;
     letter-spacing: .68px;
@@ -5349,7 +5361,7 @@ input{
     margin-bottom: 46px;
   }
 
-  .blog-item__subtitle-h5{
+  .blog-item__subtitle-h3, .blog-item h3{
     font-size: 20px;
     line-height: 30px;
     letter-spacing: .4px;
@@ -5473,6 +5485,14 @@ input{
     font-size: 12px;
     letter-spacing: .6px;
     line-height: 45px;
+  }
+
+  .blog-item p > a, .custom-txt-link{
+    font-size: 18px;
+
+    &:after{
+      bottom: 2px;
+    }
   }
 
   //1800 blog page media end
@@ -6617,7 +6637,7 @@ input{
     padding-top: 99px;
   }
 
-  .blog-item__subtitle{
+  .blog-item__subtitle, .blog-item h2{
     max-width: 590px;
   }
 
@@ -7496,7 +7516,7 @@ input{
     letter-spacing: .14px;
   }
 
-  .blog-item__subtitle-h5{
+  .blog-item__subtitle-h3, .blog-item h3{
     font-size: 16px;
     line-height: 26px;
     letter-spacing: .32px;
@@ -7581,7 +7601,7 @@ input{
     padding: 35px 0 35px;
   }
 
-  .blog-item__title{
+  .blog-item__title, .blog-item h1{
     font-size: 30px;
     line-height: 36px;
     letter-spacing: .56px;
@@ -7593,7 +7613,7 @@ input{
     letter-spacing: .28px;
   }
 
-  .blog-item__subtitle{
+  .blog-item__subtitle, .blog-item h2{
     font-size: 22px;
     line-height: 32px;
     letter-spacing: .44px;
@@ -7610,7 +7630,7 @@ input{
     letter-spacing: .32px;
   }
 
-  .custom-txt-link{
+  .custom-txt-link, .blog-item p > a{
     font-size: 14px;
     line-height: 24px;
     letter-spacing: .28px;
@@ -7628,7 +7648,7 @@ input{
     margin-bottom: 27px;
   }
 
-  .blog-item__subtitle{
+  .blog-item__subtitle, .blog-item h2{
     padding-top: 5px;
   }
 
