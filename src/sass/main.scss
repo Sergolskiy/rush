@@ -5574,7 +5574,7 @@ input{
   }
 
   .blog-sidebar__content{
-    padding-bottom: 10px;
+    padding-bottom: 25px;
   }
 
   .blog-sidebar__section {
@@ -5659,6 +5659,15 @@ input{
     &:after{
       bottom: -1px;
     }
+  }
+
+
+  .block-btn__title{
+    line-height: 34px;
+  }
+
+  .block-btn__btn{
+    padding-top: 18px;
   }
 
   //1800 blog page media end
@@ -6901,14 +6910,6 @@ input{
     padding: 0;
   }
 
-  .block-btn__title{
-    line-height: 34px;
-  }
-
-  .block-btn__btn{
-    padding-top: 18px;
-  }
-
   .blog-sidebar{
     max-width: 565px;
     left: 15px
@@ -7910,6 +7911,7 @@ input{
     line-height: 45px;
     letter-spacing: .56px;
     padding-bottom: 0;
+    margin-bottom: 0;
 
     &:after{
       display: none;
@@ -7925,6 +7927,7 @@ input{
 
   .blog-sidebar__section-case{
     min-height: auto;
+    padding-top: 13px;
   }
 
   .blog-sidebar__section-case-name{
@@ -7934,7 +7937,13 @@ input{
   }
 
   .blog-sidebar__section-case-txt{
-    padding-bottom: 17px;
+    //padding-bottom: 17px;
+    padding-bottom: 5px;
+  }
+
+  .blog-sidebar__section-case:nth-child(2) .blog-sidebar__section-case-name{
+    position: relative;
+    top: 7px;
   }
 
   .blog-head__description{
