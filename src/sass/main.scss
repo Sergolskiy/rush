@@ -1947,10 +1947,68 @@ input{
     max-width: 100%;
   }
 
-  .custom-item-ul{
+  .custom-list-ul li{
     margin-bottom: 2px;
   }
 
+  .seo-block__content h1{
+    font-size: 54px;
+    line-height: 64px;
+    font-family: Poppins;
+    font-weight: 700;
+
+    @media (max-width: 1800px) {
+      margin-top: 35px;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: .8px;
+    }
+    @media (max-width: 1220px) {
+      line-height: 45px;
+    }
+    @media (max-width: 550px) {
+      line-height: 32px;
+      font-size: 22px;
+      letter-spacing: .44px;
+    }
+    @media (max-width: 420px) {
+      line-height: 36px;
+      font-size: 28px;
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .seo-block__content h2{
+    font-size: 40px;
+    line-height: 46px;
+    margin-top: 48px;
+    letter-spacing: .8px;
+    font-weight: 700;
+
+    @media (max-width: 1800px) {
+      font-size: 34px;
+      line-height: 40px;
+      margin-top: 34px;
+      letter-spacing: .68px;
+      margin-bottom: 15px;
+    }
+    @media (max-width: 1220px) {
+      font-size: 34px;
+      line-height: 40px;
+      margin-top: 40px;
+      letter-spacing: .68px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 22px;
+      line-height: 32px;
+      margin-top: 22px;
+      letter-spacing: 1.1px;
+      margin-bottom: 10px;
+    }
+  }
 
 }
 
@@ -2203,6 +2261,7 @@ input{
     min-width: 200px;
     line-height: 60px;
     font-size: 17px;
+    letter-spacing: 0.85px;
   }
 
   &__tab-right{
@@ -2451,29 +2510,62 @@ input{
 
 .custom-list-ul{
     max-width: 300px;
-}
 
-.custom-item-ul{
-  font-size: 21px;
-  line-height: 30px;
-  letter-spacing: 0.21px;
-  color: #2e3745;
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 10px;
+  li{
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: 0.21px;
+    color: #2e3745;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
 
-  &:before{
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #a3e9db;
-    position: absolute;
-    left: 1px;
-    top: 13px;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a3e9db;
+      position: absolute;
+      left: 1px;
+      top: 13px;
+    }
   }
 }
+
+ol.custom-list-ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 0;
+
+  li{
+    position: relative;
+    counter-increment: step-counter;
+
+    &:before{
+      display: none;
+    }
+
+    &:after{
+      content: counter(step-counter);
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      font-family: 'Source Sans Pro';
+      font-size: 15px;
+      color: #a3e9db;
+      margin-top: 1px;
+      font-weight: 700;
+    }
+  }
+}
+
+
 
 .custom-form{
   position: relative;
@@ -5420,13 +5512,13 @@ input{
     max-width: 100%;
   }
 
-  .custom-item-ul{
+  .custom-list-ul li{
     font-size: 18px;
     line-height: 26px;
     letter-spacing: .18px;
   }
 
-  .custom-item-ul:before {
+  .custom-list-ul li:before {
     left: 0;
     top: 12px;
   }
@@ -6698,21 +6790,21 @@ input{
   .pricing__tab-item{
     width: 33.3%;
     height: 70px;
-    background: white;
+    background: #dcfff8;
   }
 
   .pricing__tab-item:hover{
     transform: translateX(0) translateY(-18px);
     height: 70px;
     width: 33.3%;
-    background: white;
+    background: #dcfff8;
   }
 
   .pricing__tab-item.active{
     transform: translateX(0) translateY(-18px);
     height: 70px;
     width: 33.3%;
-    background: #dcfff8;
+    background: white;
   }
 
 
@@ -7592,6 +7684,10 @@ input{
 
 @media (max-width: 550px) {
 
+  ol.custom-list-ul li:after{
+    font-size: 13px;
+  }
+
   .header__menu-wrap{
     max-height: calc(100vh - 60px);
   }
@@ -7874,7 +7970,7 @@ input{
     padding-top: 25px;
   }
 
-  .custom-item-ul{
+  .custom-list-ul li{
     font-size: 14px;
     line-height: 22px;
     letter-spacing: .14px;
@@ -8436,6 +8532,18 @@ input{
     transform: translateX(0) translateY(-9px);
   }
 
+  .pricing__tab-item{
+    background: white;
+  }
+
+  .pricing__tab-item:hover{
+    background: white;
+  }
+
+  .pricing__tab-item.active{
+    background: #dcfff8;
+  }
+
   .pricing__tab-item.active,
   .pricing__tab-item{
     height: 45px;
@@ -8462,6 +8570,7 @@ input{
   .pricing__tab-price-m{
     letter-spacing: 0.64px;
     font-size: 32px;
+    left: 0;
   }
 
   .pricing__tab-btn{
@@ -8480,11 +8589,16 @@ input{
   }
 
   .pricing__tab-price{
-    padding-left: 25px;
+    padding-left: 23px;
   }
 
   .pricing-types{
     left: 10px;
+  }
+
+  .pricing-types__inner{
+    position: relative;
+    left: 11px;
   }
 
   .pricing-types__item{
@@ -8532,8 +8646,8 @@ input{
   }
 
   .seo-blue--small .site-btn-blue{
-    min-width: 110px;
-    line-height: 30px;
+    min-width: 105px;
+    line-height: 29px;
   }
 
   .seo-blue--small .seo-blue__title:after{
@@ -8579,6 +8693,7 @@ input{
 
   .seo-blue__btn-i{
     line-height: 40px;
+    font-size: 10px;
   }
 
   .seo-head__btn{
@@ -8895,7 +9010,7 @@ input{
   }
 
   .seo-page-content .blog-posts__inner{
-    padding-top: 18px;
+    padding-top: 56px;
   }
 
   .blog-sidebar__inner{
