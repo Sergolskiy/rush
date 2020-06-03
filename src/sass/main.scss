@@ -4223,6 +4223,7 @@ ol.custom-list-ul{
     padding-top: 72px;
     height: 100vh;
     min-height: 850px;
+    min-height: 1079px;
   }
 
   &__top-inner{
@@ -4712,6 +4713,7 @@ ol.custom-list-ul{
     }
 
     &.active{
+      border-color: transparent;
       svg{
         path{
           stroke-dashoffset: 0;
@@ -5858,6 +5860,7 @@ ol.custom-list-ul{
 
   .about__top {
     padding-top: 126px;
+    padding-top: 0;
     padding-bottom: 18px;
     min-height: 760px;
   }
@@ -5932,6 +5935,7 @@ ol.custom-list-ul{
 
   .about__scroll-to-wrap{
     margin-top: -25px;
+    margin-bottom: auto;
   }
 
   .statistic{
@@ -7735,7 +7739,7 @@ ol.custom-list-ul{
     display: block;
     width: 140px;
     height: 35px;
-    background: url("../img/home/home-mob-btn.png") center center no-repeat;
+    background: url("../img/home/1233212.svg") center center no-repeat;
     margin: 20px auto 0;
   }
 
@@ -8748,10 +8752,11 @@ ol.custom-list-ul{
 
   .home-card__list-tab-i {
     font-size: 16px;
-    width: auto;
+    //width: auto;
     letter-spacing: .32px;
     padding-bottom: 9px;
     text-align: left;
+    text-align: center;
 
     &:nth-child(2){
       text-align: center;

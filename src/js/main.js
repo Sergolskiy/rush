@@ -526,6 +526,19 @@ $(document).ready(function () {
 
   $('.hiw__step').click(function () {
 
+    if($(this).hasClass('active')){
+      skipStep(0, 0);
+      skipStep(1, 1);
+      skipStep(2, 2);
+      $(this).removeClass('active');
+
+      var that = $(this);
+      setTimeout(function () {
+        that.click();
+      }, 150);
+      return;
+    }
+
     $('.hiw__step').removeClass('active');
     $(this).addClass('active');
 
