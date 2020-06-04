@@ -593,7 +593,7 @@ SineWaves.prototype.time = 0;
  *                       time.
  */
 SineWaves.prototype.update = function(time) {
-  this.time = this.time - 0.007;
+  this.time = this.time - 0.017;
   if (typeof time === 'undefined') {
     time = this.time;
   }
