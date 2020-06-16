@@ -17,12 +17,7 @@ if (ua.indexOf('safari') != -1) {
   }
 }
 
-if(
-    window.navigator.userAgent.indexOf("Edge") > -1
-    // || navigator.userAgent.indexOf("MSIE ") > -1
-    // || navigator.userAgent.indexOf("Trident/") > -1
-) {
-
+if(window.navigator.userAgent.indexOf("Edge") > -1) {
   $('body').addClass('edge');
 }
 
@@ -205,7 +200,7 @@ $(document).ready(function () {
       $('.statistic__graph').addClass('animate');
     }
 
-    if(winScrollTop > scrollToElem3 + 400){
+    if(winScrollTop > scrollToElem3 + 200){
       $('.home-view').addClass('active');
     } else {
       $('.home-view').removeClass('active');
